@@ -1,11 +1,12 @@
 import React from 'react';
 import Cube from '../components/Cube.jsx'
+import Navbar from '../components/Navbar.jsx'
 
 function Home() {
     return(
         <>
         <div>
-            <p>Hello there!</p>
+            <Navbar />
             <Cube />
         </div>
         </>

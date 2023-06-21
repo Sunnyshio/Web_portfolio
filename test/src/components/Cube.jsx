@@ -51,7 +51,7 @@ const Cube = () => {
         }
       } else {
         cube.position.y -= 0.002;
-        if (cube.position.y <= -.2) {
+        if (cube.position.y <= -.1) {
           upward = true;
         }
       }
