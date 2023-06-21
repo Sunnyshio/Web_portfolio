@@ -6,14 +6,14 @@ function Navbar() {
         <>
         <div>
 
-            <nav>
+            <div>
                 <ul className='nav-menu'>
                     <li>About me</li>
                     <li>Experience</li>
                     <li>Projects</li>
                     <li>Contact me</li>
                 </ul>
-            </nav>
+            </div>
             
         </div>
         </>
