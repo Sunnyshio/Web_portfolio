@@ -1,9 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import App from './App.js';
 import Home from './Pages/Home.jsx';
 
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { 
+    createBrowserRouter, 
+    RouterProvider 
+} from 'react-router-dom';
 
 const router = createBrowserRouter([
     {
@@ -13,10 +16,13 @@ const router = createBrowserRouter([
     {
         path: '/home',
         element: <Home />,
-    }
+    },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render (
     <RouterProvider router={router} />
 );
+
+
