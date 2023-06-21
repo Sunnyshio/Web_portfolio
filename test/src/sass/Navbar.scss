@@ -1,0 +1,12 @@
+.nav-menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+
+    li {
+        color: white;
+    }
+}
