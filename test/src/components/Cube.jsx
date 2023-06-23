@@ -19,24 +19,54 @@ const Cube = () => {
     canvasRef.current.appendChild(renderer.domElement);
 
     const geometry = new THREE.BoxGeometry(0.3, 0.3, 0.3);
+    const coneGeometry = new THREE.ConeGeometry(0.2, 0.3, 3);
 
-    const canvas = document.createElement('canvas');
-    canvas.width = 2;
-    canvas.height = 256;
+    const cubeCanvas = document.createElement('canvas');
+    cubeCanvas.width = 2;
+    cubeCanvas.height = 256;
 
-    const context = canvas.getContext('2d');
-    const gradient = context.createLinearGradient(0, 0, 0, canvas.height);
-    gradient.addColorStop(0, '#f6d365');
-    gradient.addColorStop(1, '#fda085');
-    context.fillStyle = gradient;
-    context.fillRect(0, 0, canvas.width, canvas.height);
+    const cubeContext = cubeCanvas.getContext('2d');
+    const cubeGradient = cubeContext.createLinearGradient(0, 0, 0, cubeCanvas.height);
+    cubeGradient.addColorStop(0, '#f6d365');
+    cubeGradient.addColorStop(1, '#fda085');
+    cubeContext.fillStyle = cubeGradient;
+    cubeContext.fillRect(0, 0, cubeCanvas.width, cubeCanvas.height);
 
-    const texture = new THREE.CanvasTexture(canvas);
-    const material = new THREE.MeshBasicMaterial({ map: texture, transparent: true });
+    const cubeTexture = new THREE.CanvasTexture(cubeCanvas);
+    const cubeMaterial = new THREE.MeshBasicMaterial({
+      map: cubeTexture,
+      transparent: true,
+    });
 
-    const cube = new THREE.Mesh(geometry, material);
+    const triangleCanvas = document.createElement('canvas');
+    triangleCanvas.width = 2;
+    triangleCanvas.height = 256;
 
-    scene.add(cube);
+    const triangleContext = triangleCanvas.getContext('2d');
+    const triangleGradient = triangleContext.createLinearGradient(0, 0, 0, triangleCanvas.height);
+    triangleGradient.addColorStop(0, '#8ec5fc');
+    triangleGradient.addColorStop(1, '#654E92');
+    triangleContext.fillStyle = triangleGradient;
+    triangleContext.fillRect(0, 0, triangleCanvas.width, triangleCanvas.height);
+
+    const triangleTexture = new THREE.CanvasTexture(triangleCanvas);
+    const triangleMaterial = new THREE.MeshBasicMaterial({
+      map: triangleTexture,
+      transparent: true,
+    });
+
+    const cube1 = new THREE.Mesh(geometry, cubeMaterial);
+    const cube2 = new THREE.Mesh(geometry, cubeMaterial);
+    const triangle = new THREE.Mesh(coneGeometry, triangleMaterial);
+
+    scene.add(cube1);
+    scene.add(cube2);
+    scene.add(triangle);
+
+    // Position the cubes and triangle
+    cube1.position.set(-8.5, .5, 0);
+    cube2.position.set(0, 0, 0);
+    triangle.position.set(2, 0, 2);
 
     camera.position.z = 6;
 
@@ -45,20 +75,27 @@ const Cube = () => {
       requestAnimationFrame(animate);
 
       if (upward) {
-        cube.position.y += 0.002;
-        if (cube.position.y >= .1) {
+        cube1.position.y += 0.002;
+        cube2.position.y += 0.002;
+        triangle.position.y += 0.002;
+        if (cube1.position.y >= 0.1) {
           upward = false;
         }
       } else {
-        cube.position.y -= 0.002;
-        if (cube.position.y <= -.1) {
+        cube1.position.y -= 0.002;
+        cube2.position.y -= 0.002;
+        triangle.position.y -= 0.002;
+        if (cube1.position.y <= -0.1) {
           upward = true;
         }
       }
 
-      cube.rotation.x += 0.02;
-      cube.rotation.y += 0.02;
-      cube.position.set(-6, cube.position.y, 0);
+      cube1.rotation.x += 0.02;
+      cube1.rotation.y += 0.02;
+      cube2.rotation.x += 0.02;
+      cube2.rotation.y += 0.02;
+      triangle.rotation.x += 0.02;
+      triangle.rotation.y += 0.02;
 
       renderer.render(scene, camera);
     };
@@ -70,7 +107,19 @@ const Cube = () => {
     };
   }, []);
 
-  return <div ref={canvasRef} />;
+  return (
+    <div
+      ref={canvasRef}
+      style={{
+        position: 'absolute',
+        top: '-13rem',
+        left: '4rem',
+        width: '100%',
+        height: '100%',
+      }}
+      
+    />
+  );
 };
 
 export default Cube;
