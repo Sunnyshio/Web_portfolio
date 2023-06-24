@@ -33,6 +33,12 @@ function Content() {
                 <button className='proceed-btn'>Proceed</button>
 
                 <div className='shape circ1'></div>
+                <div className='shape triangle1'></div>
+                <div className='shape triangle2'></div>
+                <div className='shape circ2'></div>
+                <div className='shape square1'></div>
+                <div className='shape circ3'></div>
+
 
                 <div className='about-me'>
                     <h4>&#x1F44B; About me</h4>
