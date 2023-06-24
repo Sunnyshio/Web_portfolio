@@ -24,9 +24,10 @@
     margin-top: 6rem;
     align-items: center;
 
-    opacity: 0;
+    opacity: 1;
+    /* opacity: 0; */
     transform: translateY(-20px);
-    transition: opacity 1s, transform 1s;
+    transition: opacity 1s, transform 1.5s;
 }
 .banner.show {
     opacity: 1;
@@ -39,6 +40,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 500;
     letter-spacing: 1.6px;
+    transition: opacity 1.5s, transform 1s;
 }
 
 .ban1 {
@@ -51,6 +53,7 @@
     font-size: 50px;
     font-weight: 700;
     letter-spacing: 3px;
+    transition: opacity 1s, transform 1.5s;
 }
 .ban1 .p1 {
     color: white;
@@ -64,7 +67,8 @@
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     letter-spacing: 2px;
-    margin-top: -2.5rem;
+    margin-top: -3rem;
+    transition: opacity 1s, transform 1.5s;
 }
 
 .banner-intro {
@@ -80,9 +84,8 @@
     font-weight: 500;
     letter-spacing: 2.4px;
 
-    opacity: 0;
     transform: translateY(-20px);
-    transition: opacity 1.5s, transform 1.5s;
+    transition: opacity 1.5s, transform 1.8s;
 }
 .banner.show .banner-intro {
     opacity: 1;
@@ -98,10 +101,11 @@
     cursor: pointer;
     background-color: var(--lightBlue);
     box-shadow: 0px 0px 4px 3px rgba(242, 231, 231, 0.25);
+    transition: opacity 1.5s, transform 1.5s;
 
     letter-spacing: 1px;
     font-family: Inter;
-    font-weight: 700;
+    font-weight: 500;
     color: var(--cream);
     margin-top: 5rem;
 }
@@ -114,15 +118,19 @@
     flex-direction: column;
     align-items: flex-start;
     margin-top: 5rem;
+    margin-bottom: 3rem;
     text-align: left;
+    transition: opacity .5s, transform 1s;
 }
 
 .about-me h4 {
     color: var(--lightBlue);
+    transition: opacity 1.5s, transform 1.5s;
 }
 
 .sub-container1 {
     display: flex;
+    transition: opacity 1.5s, transform 1.5s;
 }
 .about-me ul {
     list-style: none;
@@ -139,6 +147,7 @@
     font-family: Inter;
     font-weight: 500;
     letter-spacing: 2px;
+    transition: opacity 1.5s, transform 1.5s;
 }
 
 .self-images {
@@ -178,9 +187,10 @@
 
 .shape {
     position: absolute;
+    transition: transform 1.5s;
 }
 .circ1 {
-    margin-top: -9rem;
+    margin-top: -5rem;
     margin-left: -60rem;
     width: 142px;
     height: 142px;
@@ -196,9 +206,9 @@ rgba(165, 192, 221, 0.00) 100%);
     border-right: 25px solid transparent;
     border-bottom: 40px solid var(--purple);
     filter: drop-shadow(7px 4px 2px rgba(128, 121, 121, 0.25));
-    transform: rotate(70deg);
+    transform: rotate(-80deg);
     
-    margin-top: -4.5rem;
+    margin-top: 3rem;
     margin-left: -45rem;
 }
 .triangle2 {
@@ -206,15 +216,15 @@ rgba(165, 192, 221, 0.00) 100%);
     border-right: 25px solid transparent;
     border-bottom: 40px solid var(--purple);
     filter: drop-shadow(7px 4px 2px rgba(128, 121, 121, 0.25));
-    transform: rotate(10deg);
+    transform: rotate(40deg);
 
     margin-right: -74rem;
-    margin-top: 15rem;
+    margin-top: 5rem;
 }
 .circ2 {
     width: 40px;
     height: 40px;
-    transform: rotate(-50.125deg);
+    transform: rotate(115deg);
     flex-shrink: 0;
 
     border-radius: 50%;
@@ -222,7 +232,7 @@ rgba(165, 192, 221, 0.00) 100%);
     box-shadow: 0px 4px 4px 3px rgba(255, 255, 255, 0.25);
 
     margin-top: 29rem;
-    margin-left: -54rem;
+    margin-left: -50rem;
 }
 .square1 {
     width: 60px;
@@ -248,3 +258,14 @@ rgba(165, 192, 221, 0.00) 100%);
     background: linear-gradient(139deg, rgba(235, 216, 178, 0.70) 0%, rgba(108, 155, 207, 0.70) 100%);
     box-shadow: 10px 4px 4px 0px rgba(128, 121, 121, 0.25);
 }
+
+::-webkit-scrollbar {
+    width: 6px;
+  }
+::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--cream);
+    border-radius: 50px;
+  }
