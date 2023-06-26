@@ -132,7 +132,7 @@
     height: 100vh;
     text-align: left;
     transition: transform 1s;
-    margin-top: -2rem;
+    margin-top: 2rem;
     /* background-color:#6C9BCF; */
 }
 .scrolldown-text {
@@ -230,9 +230,9 @@
     height: auto;
 }
 .stack-line1 li, .stack-line2 li, .stack-line3 li {
-    padding: 5px 15px;
+    padding: 5px 12px;
     background-color: var(--lightBlue);
-    border-radius: 10px;
+    border-radius: 5px;
     letter-spacing: 1px;
     color: white;
 }
@@ -247,42 +247,128 @@
 
 /* EXPERIENCE SECTION STYLES */
 .experience {
-    height: 101vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: center;
     font-family: Inter;
-    opacity: 1;
-    background-color: white;
+    gap: 2rem;
+    margin-top: -3rem;
+    margin-left: -3rem;
+    /* background-color:#6C9BCF; */
 }
 
-.experience-container p {
+.experience-container, .experience-container2, .experience-container3 {
+    font-family: Inter;
+}
+.experience-container p, .experience-container2 p, .experience-container3 p {
+    display: flex;
+    align-items: center;
     color: var(--cream);
-    margin-top: -4rem;
+}
+.cards-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 }
 .cards-container ul {
     list-style: none;
 }
 
-.card-divider1 {
+.card-divider1, .card-divider2, .card-divider3 {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    margin-top: -14rem;
-    background-color: #6C9BCF;
+    background-color: white;
 }
-.card1 {
+.card1, .card2, .card3 {
     display: flex;
     gap: 3rem;
     align-items: center;
     justify-content: center;
+    z-index: 2;
 }
 .card-info {
+    display: flex;
+    flex-direction: column;
     background-color: var(--purple);
+    width: 320px;
+    height: 180px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px #EBD8B2;
 }
 .card-description {
-    background-color: #654E92;
+    padding: 5px 10px;
     border: 2px solid white;
+    border-radius: 10px;
+    background-color: var(--darkViolet);
+}
+.card-description p {
+    color: white;
+}
+
+.card1 .info-title, .card2 .info-title, .card3 .info-title {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-top: .5rem;
+}
+.info-title .img1 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.info-title, .card1 p, .card2 p, .card3 p {
+    margin-left: .5rem;
+}
+
+.software {
+    margin-top: -1rem;
+}
+.date {
+    margin-top: -0.5rem;
+}
+.position {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+.title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.experience-text {
+    color: var(--cream);
+    letter-spacing: 1px;
+    font-family: Inter;
+    font-weight: 500;
+}
+.connector-line {
+    position: absolute;
+    background-color: white;
+    height: 110%;
+    width: 2px;
+    border-radius: 50px;
+    margin-top: 58rem;
+    margin-left: 26.2rem;
+}
+.connector-lineh {
+    position: absolute;
+    background-color: white;
+    border-radius: 50px;
+    width: 30%;
+    height: 2px;
+    margin-top: -7.5rem;
+    margin-left: 8rem;
+    z-index: 1;
+    transition: transform0 .5s;
+    overflow: hidden;
+}
+.card2 {
+    position: relative;
+    margin-right: 1.85rem;
 }
 
 

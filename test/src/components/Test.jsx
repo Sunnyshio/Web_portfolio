@@ -5,6 +5,37 @@ import '../css/Content.css';
 import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
+import ingen from '../css/img/Ingenuity.png';
+import sr from '../css/img/Sphere.jpeg';
+
+function AnimatedDiv() {
+  const [ref, inView] = useInView({ triggerOnce: true });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ height: 0 }}
+      animate={{ height: inView ? '100%' : 0 }}
+      transition={{ duration: 0.9, delay: 0.8 }}
+      className='connector-line'
+    ></motion.div>
+  );
+}
+
+function ConnectorDiv() {
+  const [ref, inView] = useInView({ triggerOnce: true });
+
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ width: 0 }}
+      animate={{ width: inView ? '30%' : 0 }}
+      transition={{ duration: 0.9, delay: 0.8 }}
+      className='connector-lineh'
+    ></motion.div>
+  );
+}
+
 function Section({ children }) {
   const [ref, inView] = useInView({ triggerOnce: true });
 
@@ -33,19 +64,7 @@ function Test() {
   const [showScrolldownText, setShowScrolldownText] = useState(false);
   const sectionsRef = useRef(null);
 
-  // const handleProceedClick = () => {
-  //   setShowSections(true);
-  //   setTimeout(() => {
-  //     const scrollHeight = document.documentElement.scrollHeight;
-  //     const windowHeight = window.innerHeight;
-  //     const bottomOffset = scrollHeight - windowHeight;
-  //     window.scrollTo({
-  //       top: bottomOffset,
-  //       behavior: 'smooth',
-  //     });
-  //     setShowScrolldownText(true);
-  //   }, 100);
-  // };
+
   const handleProceedClick = () => {
     setShowSections(true);
     setTimeout(() => {
@@ -61,7 +80,7 @@ function Test() {
   
   
   
-  
+    
   return (
     <>
       <div className='content'>
@@ -262,17 +281,31 @@ function Test() {
                 </motion.div>
               </Section>
 
-              <Section>
-                <motion.div className='experience'>
-                  <div className='experience-container'>
-                    <div className='cards-container'>
 
-                      <ul className='card1'>
+              {/* EXPERIENCE */}
+
+              <AnimatedDiv><motion.div initial={{ height: 0 }} animate={{ height: '100%' }}
+                transition={{ duration: 0.9, delay: 0.8 }}
+                className='connector-line'>
+              </motion.div></AnimatedDiv>
+
+              <div className='experience'>
+              <Section><h3 className='experience-text'>
+                My Work Experience</h3></Section>
+
+              <Section className='exp1'>
+                <div className='experience-container'>
+                  <div className='cards-container'>
+                  <ul className='card1'>
                         <li className='card-info'>
-                          <p>Ingenuity Software</p>
-                          <p>FULL-STACK DEVELOPMENT INTERN</p>
-                          <p>@ Ingenuity software</p>
-                          <p>APRIL 2023 – JUNE 2023</p>
+                          <div className='info-title'>
+                            <img src={ingen} alt="ingenuity_logo" className='img1'/>
+                            <div className='title'>
+                              <p>Ingenuity</p>
+                              <p className='software'> Software</p></div>
+                          </div>
+                          <p className='position'>FULL-STACK DEVELOPMENT INTERN</p>
+                          <p className='date'>APRIL 2023 – JUNE 2023</p>
                         </li>
 
                         <li className='card-divider1'></li>
@@ -284,12 +317,93 @@ function Test() {
                           <p>helper. The application is integrated with AI </p>
                           <p>through ChatGPT’s API endpoint connection.</p>
                         </li>
-                      </ul>
-
-                    </div>
+                  </ul>
                   </div>
+                </div>
+
+                <ConnectorDiv>
+                <motion.div initial={{ width: 0 }} animate={{ width: '30%' }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className='connector-lineh'>
                 </motion.div>
+              </ConnectorDiv>
               </Section>
+
+              
+
+              <Section className='exp2'>
+                <div className='experience-container2'>
+                  <div className='cards-container'>
+                  <ul className='card2'>
+                  <li className='card-description'>
+                          <p>Led a team of intern-developers and headed</p>
+                          <p>the development of an artificial intelligence </p>
+                          <p>integrated application that acts as a student</p>
+                          <p>helper. The application is integrated with AI </p>
+                          <p>through ChatGPT’s API endpoint connection.</p>
+                        </li>
+
+                        <li className='card-divider2'></li>
+                        
+                        <li className='card-info'>
+                          <div className='info-title'>
+                            <img src={ingen} alt="ingenuity_logo" className='img1'/>
+                            <div className='title'>
+                              <p>Ingenuity</p>
+                              <p className='software'> Software</p></div>
+                          </div>
+                          <p className='position'>FULL-STACK DEVELOPMENT INTERN</p>
+                          <p className='date'>APRIL 2023 – JUNE 2023</p>
+                        </li>
+                  </ul>
+                  </div>
+                </div>
+
+                <ConnectorDiv>
+                <motion.div initial={{ width: 0 }} animate={{ width: '30%' }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  style={{ marginLeft: '10rem' }}
+                  className='connector-lineh'>
+                </motion.div>
+              </ConnectorDiv>
+              </Section>
+
+              <Section className='exp3'>
+                <div className='experience-container'>
+                  <div className='cards-container'>
+                  <ul className='card3'>
+                        <li className='card-info'>
+                          <div className='info-title'>
+                            <img src={ingen} alt="ingenuity_logo" className='img1'/>
+                            <div className='title'>
+                              <p>Ingenuity</p>
+                              <p className='software'> Software</p></div>
+                          </div>
+                          <p className='position'>FULL-STACK DEVELOPMENT INTERN</p>
+                          <p className='date'>APRIL 2023 – JUNE 2023</p>
+                        </li>
+
+                        <li className='card-divider3'></li>
+                        
+                        <li className='card-description'>
+                          <p>Led a team of intern-developers and headed</p>
+                          <p>the development of an artificial intelligence </p>
+                          <p>integrated application that acts as a student</p>
+                          <p>helper. The application is integrated with AI </p>
+                          <p>through ChatGPT’s API endpoint connection.</p>
+                        </li>
+                  </ul>
+                  </div>
+                </div>
+
+                <ConnectorDiv>
+                <motion.div initial={{ width: 0 }} animate={{ width: '30%' }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  className='connector-lineh1'>
+                </motion.div>
+              </ConnectorDiv>
+              </Section>
+            </div>
 
               <Section>
                 <motion.div className='projects'>
