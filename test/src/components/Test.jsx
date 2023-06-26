@@ -74,7 +74,7 @@ function Test() {
         top: targetScroll,
         behavior: 'smooth',
       });
-      setShowScrolldownText(true);
+      // setShowScrolldownText(true);
     }, 100);
   };
   
@@ -284,11 +284,13 @@ function Test() {
 
               {/* EXPERIENCE */}
 
+              
               <AnimatedDiv><motion.div initial={{ height: 0 }} animate={{ height: '100%' }}
                 transition={{ duration: 0.9, delay: 0.8 }}
                 className='connector-line'>
               </motion.div></AnimatedDiv>
 
+              
               <div className='experience'>
               <Section><h3 className='experience-text'>
                 My Work Experience</h3></Section>
@@ -404,6 +406,7 @@ function Test() {
               </ConnectorDiv>
               </Section>
             </div>
+              
 
               <Section>
                 <motion.div className='projects'>
@@ -424,8 +427,8 @@ function Test() {
             </div></Section>
           )}
 
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: showScrolldownText ? 1 : 0 }} transition={{ duration: 1 }}
-          className='scrolldown-text'>Scroll down</motion.p>
+          {/* <motion.p initial={{ opacity: 0 }} animate={{ opacity: showScrolldownText ? 1 : 0 }} transition={{ duration: 1 }}
+          className='scrolldown-text'>Scroll down</motion.p> */}
 
       
           
