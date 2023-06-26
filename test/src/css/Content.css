@@ -21,11 +21,13 @@
 .banner {
     display: flex;
     flex-direction: column;
-    margin-top: 6rem;
     align-items: center;
+    justify-content: center;
+    /* margin-top: 6rem; */
+    margin-top: -2rem;
+    height: 100vh;
 
     opacity: 1;
-    /* opacity: 0; */
     transform: translateY(-20px);
     transition: opacity 1s, transform 1.5s;
 }
@@ -117,15 +119,25 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-bottom: 3rem;
     text-align: left;
-    transition: opacity .5s, transform 1s;
+    transition: transform 1s;
+}
+.scrolldown-text {
+    bottom: 0;
+    color: var(--cream);
+    font-family: Inter;
+    letter-spacing: 1px;
+    font-size: large;
+    margin-top: 5rem;
+
 }
 
 .about-me h4 {
     color: var(--lightBlue);
     transition: opacity 1.5s, transform 1.5s;
+    font-size: larger;
 }
 
 .sub-container1 {
@@ -168,7 +180,7 @@
     width: 100px;
     height: 100px;
     border-radius: 30px;
-    transform: rotate(10deg);
+    transform: rotate(-10deg);
     box-shadow: 4px 4px 4px 0px #EBD8B2;
 
     margin-left: 3rem;
@@ -185,6 +197,7 @@
 }
 
 
+/* SHAPE STLES */
 .shape {
     position: absolute;
     transition: transform 1.5s;
@@ -231,7 +244,7 @@ rgba(165, 192, 221, 0.00) 100%);
     background: linear-gradient(301deg, #8D54EA 0%, rgba(165, 192, 221, 0.00) 100%);
     box-shadow: 0px 4px 4px 3px rgba(255, 255, 255, 0.25);
 
-    margin-top: 29rem;
+    margin-top: 45rem;
     margin-left: -50rem;
 }
 .square1 {
@@ -243,12 +256,12 @@ rgba(165, 192, 221, 0.00) 100%);
     background: linear-gradient(139deg, rgba(235, 216, 178, 0.70) 0%, rgba(108, 155, 207, 0.70) 100%);
     box-shadow: 10px 4px 4px 0px rgba(128, 121, 121, 0.25);
 
-    margin-top: 25rem;
+    margin-top: 40rem;
     margin-left: -60rem;    
 }
 .circ3 {
-    margin-top: 24rem;
-    margin-left: 70rem;
+    margin-top: 40rem;
+    margin-left: 50rem;
     width: 200px;
     height: 200px;
     transform: rotate(-66.265deg);
@@ -260,7 +273,7 @@ rgba(165, 192, 221, 0.00) 100%);
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 0px;
   }
 ::-webkit-scrollbar-track {
     background-color: transparent;
@@ -269,3 +282,55 @@ rgba(165, 192, 221, 0.00) 100%);
     background: var(--cream);
     border-radius: 50px;
   }
+
+
+
+
+
+
+  /* TEST CSS */
+
+  @font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/inter/v3/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2)
+      format("woff2");
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB,
+      U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  
+  
+  /* section {
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 50px;
+    /* background: #ff0055; 
+    color: white;
+  } */
+  
+  /* section:nth-child(2) {
+    background: #f108a4;
+  }
+  
+  section:nth-child(3) {
+    background: #bd19c8;
+  }
+  
+  section:nth-child(4) {
+    background: #0077ff;
+  } */
+  
+  section span {
+    display: block;
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  
+  
