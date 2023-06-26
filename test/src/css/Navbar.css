@@ -51,7 +51,8 @@
   position: absolute;
   display: flex;
   margin-top: 1rem;
-  margin-left: 40rem;
+  margin-left: 53rem;
+  /* right: 3rem; */
 
   padding: 8px 8px;
   border-radius: 10px;

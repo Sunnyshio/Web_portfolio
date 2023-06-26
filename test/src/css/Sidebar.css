@@ -82,4 +82,5 @@
     height: 100%;
     width: 2px;
     z-index: -1;
+    border-radius: 50px;
 }

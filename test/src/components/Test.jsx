@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../css/Content.css';
@@ -25,22 +25,16 @@ function Section({ children }) {
 }
 
 function Test() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const [showAboutMe, setShowAboutMe] = useState(false);
   const [showScrolldownText, setShowScrolldownText] = useState(false);
   const aboutMeRef = useRef(null);
 
-  // const handleProceedClick = () => {
-  //   setShowAboutMe(true);
-  //   setTimeout(() => {
-  //     const scrollHeight = document.documentElement.scrollHeight;
-  //     const windowHeight = window.innerHeight;
-  //     const bottomOffset = scrollHeight - windowHeight;
-  //     window.scrollTo({
-  //       top: bottomOffset,
-  //       behavior: 'smooth',
-  //     });
-  //   }, 100);
-  // };
+ 
   const handleProceedClick = () => {
     setShowAboutMe(true);
     setTimeout(() => {
@@ -54,7 +48,7 @@ function Test() {
       setShowScrolldownText(true);
     }, 100);
   };
-  
+
 
   return (
     <>
@@ -231,7 +225,7 @@ function Test() {
 
           <Section>
             <motion.div className='experience'>
-              
+
             </motion.div>
           </Section>
         </div>
@@ -241,3 +235,4 @@ function Test() {
 }
 
 export default Test;
+

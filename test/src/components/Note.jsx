@@ -231,7 +231,7 @@ function Test() {
 
           <Section>
             <motion.div className='experience'>
-              
+
             </motion.div>
           </Section>
         </div>
@@ -241,3 +241,4 @@ function Test() {
 }
 
 export default Test;
+
