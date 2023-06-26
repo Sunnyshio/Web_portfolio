@@ -1,5 +1,5 @@
-import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef, useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../css/Content.css';
 import pic1 from '../css/img/pic1.png';
@@ -25,35 +25,32 @@ function Section({ children }) {
 }
 
 function Test() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
   const [showAboutMe, setShowAboutMe] = useState(false);
   const [showScrolldownText, setShowScrolldownText] = useState(false);
+  const [showSections, setShowSections] = useState(false);
+  const experienceAnimation = useAnimation();
   const aboutMeRef = useRef(null);
+  const experienceRef = useRef(null);
+  const sectionsRef = useRef(null);
 
-  // const handleProceedClick = () => {
-  //   setShowAboutMe(true);
-  //   setTimeout(() => {
-  //     const scrollHeight = document.documentElement.scrollHeight;
-  //     const windowHeight = window.innerHeight;
-  //     const bottomOffset = scrollHeight - windowHeight;
-  //     window.scrollTo({
-  //       top: bottomOffset,
-  //       behavior: 'smooth',
-  //     });
-  //   }, 100);
-  // };
   const handleProceedClick = () => {
     setShowAboutMe(true);
     setTimeout(() => {
-      const scrollHeight = document.documentElement.scrollHeight;
-      const windowHeight = window.innerHeight;
-      const bottomOffset = scrollHeight - windowHeight;
+      const aboutMeSectionHeight = aboutMeRef.current.offsetHeight;
       window.scrollTo({
-        top: bottomOffset,
+        top: aboutMeSectionHeight,
         behavior: 'smooth',
       });
+      setShowSections(true);
       setShowScrolldownText(true);
     }, 100);
   };
+  
   
 
   return (
@@ -156,16 +153,17 @@ function Test() {
           </Section>
 
           {showAboutMe && (
-            <Section>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className='about-me'
-                ref={aboutMeRef}
-              >
-                <motion.h4 animate={{ y: 50 }} transition={{ duration: 0.3 }}>
-                  &#x1F44B; About me </motion.h4>
+            <div className='sections' ref={aboutMeRef}>
+              <Section>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.5 }}
+                  className='about-me'
+                >
+                  <motion.h4 animate={{ y: 50 }} transition={{ duration: 0.3 }}>
+                    &#x1F44B; About me{' '}
+                  </motion.h4>
                   <div className='sub-container1'>
                     <ul className='parag'>
                       <li>
@@ -222,18 +220,26 @@ function Test() {
                       </div>
                     </motion.div>
                   </div>
+                </motion.div>
+              </Section>
+            </div>
+          )}
 
-              </motion.div>
+          {showSections && (
+            <Section>
+              <div className='sections' ref={sectionsRef}>
+                <Section>
+                  <motion.div className='experience' ref={experienceRef}>
+                    <div className='experience-container'>
+                      <p>EXPERIENCE SECTION</p>
+                    </div>
+                  </motion.div>
+                </Section>
+              </div>
             </Section>
           )}
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: showScrolldownText ? 1 : 0 }} transition={{ duration: 1 }}
-          className='scrolldown-text'>Scroll down</motion.p>
 
-          <Section>
-            <motion.div className='experience'>
 
-            </motion.div>
-          </Section>
         </div>
       </div>
     </>
@@ -241,4 +247,3 @@ function Test() {
 }
 
 export default Test;
-

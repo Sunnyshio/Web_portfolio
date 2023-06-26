@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '../css/Navbar.css';
 
@@ -22,7 +22,6 @@ function Section({ children }) {
 }
 
 function Navbar() {
-
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [isTopOfPage, setIsTopOfPage] = useState(true);
   const [isVisible, setIsVisible] = useState(true);
@@ -38,30 +37,44 @@ function Navbar() {
       setIsVisible(isScrollingUp || atTopOfPage);
     };
 
+    const checkScrollPosition = () => {
+      const currentScrollPos = window.scrollY;
+      setIsVisible(currentScrollPos < 10);
+    };
+
     window.addEventListener('scroll', handleScroll);
+    window.addEventListener('load', checkScrollPosition);
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('load', checkScrollPosition);
     };
   }, [prevScrollPos]);
 
+  const menuItems = ['About me', 'Experience', 'Projects', 'Contact me'];
+
   return (
     <>
-      <motion.div
-      className='navbar'>
-
-        <Section>
-        <div className='nav-menu-container'>
-
+      <div className={`navbar ${isVisible ? '' : 'hidden'} ${isTopOfPage ? 'transparent' : ''}`}>
+        
+        <Section><div className='nav-menu-container'>
           <ul className='nav-menu'>
-            <li>About me</li>
-            <li>Experience</li>
-            <li>Projects</li>
-            <li>Contact me</li>
+            {menuItems.map((item, index) => (
+              <motion.li
+                key={index}
+                initial={{ y: -20, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
+              >
+                {item}
+              </motion.li>
+            ))}
           </ul>
-          <button className='resume-btn'>Resume</button>
-        </div>
-        </Section>
-      </motion.div>
+          <motion.button initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          className='resume-btn'>Resume</motion.button>
+        </div></Section>
+      </div>
     </>
   );
 }
