@@ -6,7 +6,7 @@ import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
-import sr from '../css/img/Sphere.jpeg';
+// import sr from '../css/img/Sphere.jpeg';
 
 function AnimatedDiv() {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -61,7 +61,6 @@ function Test() {
   }, []);
   
   const [showSections, setShowSections] = useState(false);
-  const [showScrolldownText, setShowScrolldownText] = useState(false);
   const sectionsRef = useRef(null);
 
 
@@ -426,9 +425,6 @@ function Test() {
 
             </div></Section>
           )}
-
-          {/* <motion.p initial={{ opacity: 0 }} animate={{ opacity: showScrolldownText ? 1 : 0 }} transition={{ duration: 1 }}
-          className='scrolldown-text'>Scroll down</motion.p> */}
 
       
           
