@@ -84,6 +84,11 @@ function Test() {
     <>
       <div className='content'>
         <div className='content-container'>
+
+          <div className='note'>
+            <p>Website  is  under  construction</p>
+          </div>
+
           <Section>
             <div className='banner'>
               <Section>
@@ -301,13 +306,13 @@ function Test() {
               {/* EXPERIENCE */}
 
               
-              <AnimatedDiv><motion.div initial={{ height: 0 }} animate={{ height: '100%' }}
+              <div className='experience'>
+
+              <motion.div initial={{ height: 0 }} animate={{ height: '100%' }}
                 transition={{ duration: 0.9, delay: 0.8 }}
                 className='connector-line'>
-              </motion.div></AnimatedDiv>
+              </motion.div>
 
-              
-              <div className='experience'>
               <Section><h3 className='experience-text'>
                 My Work Experience</h3></Section>
 

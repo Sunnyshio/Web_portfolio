@@ -348,12 +348,12 @@
     font-weight: 500;
 }
 .connector-line {
-    position: absolute;
+    position: relative;
     background-color: white;
     height: 110%;
     width: 2px;
     border-radius: 50px;
-    margin-top: 58rem;
+    margin-top: 53rem;
     margin-left: 26.2rem;
 }
 .connector-lineh {

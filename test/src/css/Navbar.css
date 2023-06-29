@@ -8,6 +8,21 @@
   --purple: #654E92;
 }
 
+.note {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Inter;
+  letter-spacing: 1.5px;
+  color: white;
+  z-index: 99;
+  background-color: var(--lightBlue);
+}
+
+
 .navbar {
   position: fixed;
   top: 0;
