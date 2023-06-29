@@ -81,7 +81,6 @@ function Navbar() {
                   ) : (
                     <a href={`#${item.toLowerCase().replace(' ', '-')}`}>{item}</a>
                   )}
-                {/* {item} */}
               </motion.li>
             ))}
           </ul>
