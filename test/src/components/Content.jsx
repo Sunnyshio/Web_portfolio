@@ -103,7 +103,7 @@ function Test() {
               </motion.h2>
 
               <motion.p animate={{ y: 50 }} className='banner-intro'>
-                I am a 4th-year data science student. I specialize in data
+                I am a 4th-year data science student. I specialize in data     
                 analysis, full-stack development, and UI/UX design. I love
                 helping people and create wonder through technology with style. I
                 am mostly fond of drawing meaningful stories from data.
@@ -128,10 +128,10 @@ function Test() {
               ></motion.div>
 
               <motion.div
-                animate={{ y: -80, rotate: [0, 90, 90, 0] }}
+                animate={{ y: -80, rotate: [-50] }}
                 transition={{
                   bounce: 2,
-                  duration: 1.5,
+                  duration: 0.5,
                   repeat: Infinity,
                   repeatType: 'loop',
                 }}
