@@ -53,6 +53,14 @@ function Navbar() {
 
   const menuItems = ['About me', 'Experience', 'Projects', 'Contact me'];
 
+  const handleAboutMeClick = () => {
+    const targetOffset = window.innerHeight * 1;
+    window.scrollTo({
+      top: targetOffset,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <>
       <div className={`navbar ${isVisible ? '' : 'hidden'} ${isTopOfPage ? 'transparent' : ''}`}>
@@ -66,7 +74,14 @@ function Navbar() {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: index * 0.2 + 0.5, duration: 0.5 }}
               >
-                {item}
+            {index === 0 ? (
+                    <a href="#about" onClick={handleAboutMeClick}>
+                      {item}
+                    </a>
+                  ) : (
+                    <a href={`#${item.toLowerCase().replace(' ', '-')}`}>{item}</a>
+                  )}
+                {/* {item} */}
               </motion.li>
             ))}
           </ul>

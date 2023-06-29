@@ -47,6 +47,11 @@
   padding-top: -1rem;
 }
 
+.nav-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
 .resume-btn {
   position: absolute;
   display: flex;
