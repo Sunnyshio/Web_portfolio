@@ -5,6 +5,7 @@
     --lightBlue: #6C9BCF;
     --darkViolet: #251539;
     --purple: #654E92; 
+    --darkGrad1: linear-gradient(to top, #30cfd0 0%, #330867 100%);
 }
 .content {
     margin-bottom: 1rem;
@@ -132,7 +133,7 @@
     height: 100vh;
     text-align: left;
     transition: transform 1s;
-    margin-top: 2rem;
+    margin-top: -2rem;
     /* background-color:#6C9BCF; */
 }
 .scrolldown-text {
@@ -213,6 +214,7 @@
     font-family: Inter;
     align-items: flex-start;
     margin-left: .5rem;
+    margin-top: -1rem;
 }
 .techstack-text {
     color: var(--cream);
@@ -416,26 +418,27 @@
     transition: transform 1.5s;
 }
 .circ1 {
-    margin-top: -5rem;
-    margin-left: -60rem;
+    margin-top: -25rem;
+    margin-left: -65rem;
     width: 142px;
     height: 142px;
     transform: rotate(115deg);
     flex-shrink: 0;
 
     border-radius: 142.758px;
-    background: linear-gradient(301deg, rgba(182, 142, 64, 0.60) 0%, 
-rgba(165, 192, 221, 0.00) 100%);
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    box-shadow: 10px 4px 4px 0px rgba(128, 121, 121, 0.25);
 }
 .triangle1 {
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
-    border-bottom: 40px solid var(--purple);
+    border-bottom: 40px solid var(--lightBlue);
     filter: drop-shadow(7px 4px 2px rgba(128, 121, 121, 0.25));
+    
     transform: rotate(-80deg);
     
-    margin-top: 3rem;
-    margin-left: -45rem;
+    margin-top: -30rem;
+    margin-left: -55rem;
 }
 .triangle2 {
     border-left: 25px solid transparent;
@@ -454,7 +457,7 @@ rgba(165, 192, 221, 0.00) 100%);
     flex-shrink: 0;
 
     border-radius: 50%;
-    background: linear-gradient(301deg, #8D54EA 0%, rgba(165, 192, 221, 0.00) 100%);
+    background-image: linear-gradient(to top, #fddb92 0%, #d1fdff 100%);
     box-shadow: 0px 4px 4px 3px rgba(255, 255, 255, 0.25);
 
     margin-top: 45rem;
@@ -466,7 +469,7 @@ rgba(165, 192, 221, 0.00) 100%);
     transform: rotate(-66.265deg);
     flex-shrink: 0;
 
-    background: linear-gradient(139deg, rgba(235, 216, 178, 0.70) 0%, rgba(108, 155, 207, 0.70) 100%);
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
     box-shadow: 10px 4px 4px 0px rgba(128, 121, 121, 0.25);
 
     margin-top: 40rem;
@@ -474,7 +477,7 @@ rgba(165, 192, 221, 0.00) 100%);
 }
 .circ3 {
     margin-top: 40rem;
-    margin-left: 50rem;
+    margin-left: 55rem;
     width: 200px;
     height: 200px;
     transform: rotate(-66.265deg);
@@ -483,6 +486,31 @@ rgba(165, 192, 221, 0.00) 100%);
     border-radius: 50%;
     background: linear-gradient(139deg, rgba(235, 216, 178, 0.70) 0%, rgba(108, 155, 207, 0.70) 100%);
     box-shadow: 10px 4px 4px 0px rgba(128, 121, 121, 0.25);
+}
+.square2 {
+    width: 60px;
+    height: 60px;
+    transform: rotate(-66.265deg);
+    flex-shrink: 0;
+
+    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    box-shadow: 10px 4px 4px 0px rgba(128, 121, 121, 0.25);
+
+    margin-top: -20rem;
+    margin-left: 60rem;    
+}
+.circ4 {
+    width: 80px;
+    height: 80px;
+    transform: rotate(-66.265deg);
+    flex-shrink: 0;
+    border-radius: 50%;
+
+    background-image: linear-gradient(-20deg, #f794a4 0%, #fdd6bd 100%);
+    box-shadow: 10px 4px 4px 0px rgba(128, 121, 121, 0.25);
+
+    margin-top: 30rem;
+    margin-left: 45rem;    
 }
 
 ::-webkit-scrollbar {

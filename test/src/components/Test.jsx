@@ -86,36 +86,40 @@ function Test() {
         <div className='content-container'>
           <Section>
             <div className='banner'>
-              <motion.h4 animate={{ y: 50 }}>&#x1F4AB; Hey, Guys!</motion.h4>
+              <Section>
+                <motion.h4 animate={{ y: 50 }} transition={{delay: 0.5}} >&#x1F4AB; Hey, Guys!</motion.h4>
+              </Section>
 
               <div className='ban1'>
-                <motion.p animate={{ y: 50 }} className='p1'>
+                <Section><motion.p animate={{ y: 50 }} transition={{delay: 0.3}} className='p1'>
                   I am
-                </motion.p>
+                </motion.p></Section>
 
-                <motion.p animate={{ y: 50 }} className='p2'>
+                <Section><motion.p animate={{ y: 50 }} transition={{delay: 0.3}} className='p2'>
                   Mary Villacampa
-                </motion.p>
+                </motion.p></Section>
               </div>
 
-              <motion.h2 animate={{ y: 50 }}>
+              <Section><motion.h2 animate={{ y: 50 }} transition={{delay: 0.3}}>
                 and I love bringing ideas come to life!
-              </motion.h2>
+              </motion.h2></Section>
 
-              <motion.p animate={{ y: 50 }} className='banner-intro'>
+              <Section><motion.p animate={{ y: 50 }} transition={{delay: 0.1}} className='banner-intro'>
                 I am a 4th-year data science student. I specialize in data
                 analysis, full-stack development, and UI/UX design. I love
                 helping people and create wonder through technology with style. I
                 am mostly fond of drawing meaningful stories from data.
-              </motion.p>
-              <motion.button
+              </motion.p></Section>
+
+              <Section><motion.button
                 animate={{ y: 50 }}
                 className='proceed-btn'
                 onClick={handleProceedClick}
               >
                 Proceed
-              </motion.button>
+              </motion.button></Section>
 
+              
               <motion.div
                 animate={{ y: [-80, 80], rotate: [0, 200, 200, 0] }}
                 transition={{
@@ -176,6 +180,19 @@ function Test() {
                 }}
                 className='shape circ3'
               ></motion.div>
+
+              <motion.div
+                animate={{ y: -80, rotate: [0, 90, 90, 0] }}
+                transition={{ duration: 2, repeat: Infinity, repeatType: 'loop' }}
+                className='shape square2'
+              ></motion.div>
+
+              <motion.div
+                animate={{ y: -80, rotate: [0, 90, 90, 0] }}
+                transition={{ duration: 2, repeat: Infinity, repeatType: 'loop' }}
+                className='shape circ4'
+              ></motion.div>
+
             </div>
           </Section>
 
@@ -187,12 +204,12 @@ function Test() {
                   className='about-me'
                   ref={sectionsRef}>
                     
-                  <motion.h4 animate={{ y: 50 }} transition={{ duration: 0.3 }}>
+                  <motion.h4 animate={{ y: 60 }} transition={{ duration: 0.3, delay: 0.8 }}>
                     &#x1F44B; About me </motion.h4>
                     <div className='sub-container1'>
                       <ul className='parag'>
                         <li>
-                          <motion.p animate={{ y: 50 }} transition={{ duration: 0.3 }}>
+                          <motion.p animate={{ y: 60 }} transition={{ duration: 0.5, delay: 0.5 }}>
                             My full name is Mary Rose Jofel Villacampa. My passion for
                             data science has been there ever since I was in senior high
                             school. I took up data science in the hopes of making the world
@@ -203,14 +220,14 @@ function Test() {
                           </motion.p>
                         </li>
                         <li>
-                          <motion.p animate={{ y: 50 }} transition={{ duration: 0.5 }}>
+                          <motion.p animate={{ y: 60 }} transition={{ duration: 0.5 }}>
                             Up to this day, I am striving to improve my skillset and
                             explore more on what there is to know. I aspire to create wonder
                             and bridges that would help people inspire themselves as well.
                           </motion.p>
                         </li>
                         <li>
-                          <motion.p animate={{ y: 50 }} transition={{ duration: 0.8 }}>
+                          <motion.p animate={{ y: 60 }} transition={{ duration: 0.8 }}>
                             I am currently building an application that is integrated with
                             AI to help students understand academic materials better,
                             especially those who are studying in college and going through
@@ -246,7 +263,7 @@ function Test() {
                       </motion.div>
                     </div>
 
-                    <motion.div animate={{ y: -50 }} transition={{ duration: 0.8 }}
+                    <motion.div animate={{ y: 60 }} transition={{ duration: 0.8 }}
                       className='techstack'>
                         <div className="techstack-text">
                           <p>My tech stack:</p>
