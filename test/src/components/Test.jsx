@@ -8,19 +8,19 @@ import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
 // import sr from '../css/img/Sphere.jpeg';
 
-function AnimatedDiv() {
-  const [ref, inView] = useInView({ triggerOnce: true });
+// function AnimatedDiv() {
+//   const [ref, inView] = useInView({ triggerOnce: true });
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ height: 0 }}
-      animate={{ height: inView ? '100%' : 0 }}
-      transition={{ duration: 0.9, delay: 0.8 }}
-      className='connector-line'
-    ></motion.div>
-  );
-}
+//   return (
+//     <motion.div
+//       ref={ref}
+//       initial={{ height: 0 }}
+//       animate={{ height: inView ? '95%' : 0 }}
+//       transition={{ duration: 0.9}}
+//       className='connector-line'
+//     ></motion.div>
+//   );
+// }
 
 function ConnectorDiv() {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -306,12 +306,7 @@ function Test() {
               {/* EXPERIENCE */}
 
               
-              <div className='experience'>
-
-              <motion.div initial={{ height: 0 }} animate={{ height: '100%' }}
-                transition={{ duration: 0.9, delay: 0.8 }}
-                className='connector-line'>
-              </motion.div>
+            <div className='experience'>
 
               <Section><h3 className='experience-text'>
                 My Work Experience</h3></Section>
@@ -392,7 +387,7 @@ function Test() {
               </Section>
 
               <Section className='exp3'>
-                <div className='experience-container'>
+                <div className='experience-container3'>
                   <div className='cards-container'>
                   <ul className='card3'>
                         <li className='card-info'>
