@@ -1,12 +1,14 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import '@fortawesome/fontawesome-free/css/all.css';
 import '../css/Content.css';
 import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
 import inventory from '../css/img/inventory.png';
+import AI from '../css/img/AI.png';
 
 function ConnectorDiv() {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -429,9 +431,16 @@ function Test() {
                       <div className='pcard4 pcards'>
                         <p>Inventory Manager</p>
                         <img src={inventory} alt="inventory" />
+                        <i className="fa-brands fa-github git4"></i>
+                        <i class="fa-solid fa-arrow-up link4"></i>
                       </div>
 
-                      <div className='pcard5 pcards'></div>
+                      <div className='pcard5 pcards'>
+                        <p>AI Docu Helper</p>
+                        <img src={AI} alt="AI" />
+                        <i className="fa-brands fa-github git5"></i>
+                        <i class="fa-solid fa-arrow-up link5"></i>
+                      </div>
                     </div></Section>
                   </div>
 

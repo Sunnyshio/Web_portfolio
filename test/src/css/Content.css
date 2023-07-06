@@ -447,12 +447,9 @@
     overflow: hidden;
     cursor: pointer;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
 }
-.pcard5 {
-    background: linear-gradient(90deg, #6C9BCF 0%, #EBD8B2 100%);
-    width: 565px;
-}
-
 .pcard4 p {
     color: white;
     letter-spacing: 1px;
@@ -467,14 +464,76 @@
     margin-left: -1rem;
     transition: 0.3s;
 }
+.link4 {
+    position: relative;
+    color: white;
+    margin-left: 26.2rem;
+    font-size: 1.5rem;
+    margin-top: -0.4rem;
+    transform: rotate(40deg);
+}
+.git4 {
+    position: relative;
+    color: white;
+    margin-left: 29rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
 .pcard4:hover img {
     margin-top: 0.5rem;
+    transform: scale(1.1);
 }
 .pcard4:hover {
     margin-top: -0.2rem;
 }
 .pcard4:hover p {
     font-size: 1.3rem;
+}
+.pcard4:hover .git4 {
+    margin-top: -5.9rem;
+}
+
+.pcard5 {
+    background: linear-gradient(90deg, #6C9BCF 0%, #EBD8B2 100%);
+    width: 565px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.pcard5 p {
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    transition: 0.3s;
+}
+.pcard5 img {
+    width: 450px;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-left: -0.5rem;
+}
+.git5 {
+    position: relative;
+    color: white;
+    margin-left: 33rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+.pcard5:hover img {
+    margin-top: 0.5rem;
+}
+.pcard5:hover {
+    margin-top: -0.2rem;
+}
+.pcard5:hover p {
+    font-size: 1.3rem;
+}
+.pcard5:hover .git5 {
+    margin-top: -4.3rem;
 }
 
 
