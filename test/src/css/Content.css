@@ -418,10 +418,18 @@
     gap: 1rem;
 }
 .pcard1, .pcard2, .pcard3 {
-    background: rgba(235, 216, 178, 0.8);
     width: 350px;
     height: 200px;
     border-radius: 10px;
+}
+.pcard1 {
+    background: linear-gradient(90deg, #FDDB92 0%, #AFC9B6 100%);
+}
+.pcard2 {
+    background: linear-gradient(90deg, #FAD0C4 0%, #EBD8B2 100%);
+}
+.pcard3 {
+    background: linear-gradient(90deg, #FBC2EB 0%, #8EC5FC 100%);       
 }
 
 .pcolumn2 {
@@ -429,18 +437,19 @@
     flex-wrap: nowrap;
     gap: 1rem;
 }
-.pcard4, .pcard5 {
-    background: linear-gradient(90deg, #EBD8B2 0%, #CFC7F8 100%);   
+.pcard4, .pcard5 { 
     border-radius: 10px;
     height: 300px;
 }
 .pcard4 {
+    background: linear-gradient(90deg, #EBD8B2 0%, #CFC7F8 100%);  
     width: 500px;
     overflow: hidden;
     cursor: pointer;
     transition: 0.3s;
 }
 .pcard5 {
+    background: linear-gradient(90deg, #6C9BCF 0%, #EBD8B2 100%);
     width: 565px;
 }
 
