@@ -6,21 +6,7 @@ import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
-// import sr from '../css/img/Sphere.jpeg';
-
-// function AnimatedDiv() {
-//   const [ref, inView] = useInView({ triggerOnce: true });
-
-//   return (
-//     <motion.div
-//       ref={ref}
-//       initial={{ height: 0 }}
-//       animate={{ height: inView ? '95%' : 0 }}
-//       transition={{ duration: 0.9}}
-//       className='connector-line'
-//     ></motion.div>
-//   );
-// }
+import inventory from '../css/img/inventory.png';
 
 function ConnectorDiv() {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -205,12 +191,13 @@ function Test() {
             <Section><div className='sections'>
               
               <Section className='about-me'>
+
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}
                   className='about-me'
                   ref={sectionsRef}>
                     
                   <motion.h4 animate={{ y: 60 }} transition={{ duration: 0.3, delay: 0.8 }}>
-                    &#x1F44B; About me </motion.h4>
+                    &#x1F44B; About me </motion.h4> 
                     <div className='sub-container1'>
                       <ul className='parag'>
                         <li>
@@ -309,7 +296,7 @@ function Test() {
             <div className='experience'>
 
               <Section><h3 className='experience-text'>
-                My Work Experience</h3></Section>
+              &#128188;  My Work Experience</h3></Section>
 
               <Section className='exp1'>
                 <div className='experience-container'>
@@ -427,10 +414,33 @@ function Test() {
               <Section>
                 <motion.div className='projects'>
                 <div className='projects-container'>
-                        <p>PROJECTS SECTION</p>
-                    </div>
+
+                  <h3><i>&#128736;</i> Some of My Works</h3>
+
+                  <div className='pcards-container'>
+
+                    <Section><div className='pcolumn1'>
+                      <div className='pcard1 pcards'></div>
+                      <div className='pcard2 pcards'></div>
+                      <div className='pcard3 pcards'></div>
+                    </div></Section>
+
+                    <Section><div className='pcolumn2'>
+                      <div className='pcard4 pcards'>
+                        <p>Inventory Manager</p>
+                        <img src={inventory} alt="inventory" />
+                      </div>
+
+                      <div className='pcard5 pcards'></div>
+                    </div></Section>
+                  </div>
+
+                </div>
                 </motion.div>
               </Section>
+
+
+
 
               <Section>
                 <motion.div className='contact'>
