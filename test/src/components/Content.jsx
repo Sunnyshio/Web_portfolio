@@ -70,9 +70,9 @@ function Test() {
       <div className='content'>
         <div className='content-container'>
 
-          <div className='note'>
+          {/* <div className='note'>
             <p>Website  is  under  construction</p>
-          </div>
+          </div> */}
 
           <Section>
             <div className='banner'>
