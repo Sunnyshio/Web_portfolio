@@ -6,21 +6,6 @@ import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
-// import sr from '../css/img/Sphere.jpeg';
-
-// function AnimatedDiv() {
-//   const [ref, inView] = useInView({ triggerOnce: true });
-
-//   return (
-//     <motion.div
-//       ref={ref}
-//       initial={{ height: 0 }}
-//       animate={{ height: inView ? '95%' : 0 }}
-//       transition={{ duration: 0.9}}
-//       className='connector-line'
-//     ></motion.div>
-//   );
-// }
 
 function ConnectorDiv() {
   const [ref, inView] = useInView({ triggerOnce: true });
