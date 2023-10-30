@@ -86,7 +86,7 @@ function Navbar() {
           </ul>
           <motion.button initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className='resume-btn'>Resume</motion.button>
+          className='resume-btn text-sm'>Resume</motion.button>
         </div></Section>
       </div>
     </>

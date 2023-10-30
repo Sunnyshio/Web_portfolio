@@ -55,7 +55,7 @@
   color: white;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 15px;
   letter-spacing: 1.5px;
   margin-top: 1rem;
   margin-left: -1.5rem;
@@ -72,18 +72,16 @@
   display: flex;
   margin-top: 1rem;
   margin-left: 53rem;
-  /* right: 3rem; */
 
-  padding: 8px 8px;
-  border-radius: 10px;
-  border: none;
+  padding: 5px 5px;
+  border-radius: 5px;
+  border: solid 1px;
   outline: none;
   cursor: pointer;
-  background-color: var(--cream);
-  color: var(--lightBlue);
+  background-color: var(--darkViolet);
+  color: var(--cream);
   font-family: 'Inter', sans-serif;
   letter-spacing: 0.9px;
-  box-shadow: 1px 1px 4px 1px rgba(255, 255, 255, 0.50);
 }
 
 .navbar.hidden {

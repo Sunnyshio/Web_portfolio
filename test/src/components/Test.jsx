@@ -3,12 +3,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '@fortawesome/fontawesome-free/css/all.css';
 import '../css/Content.css';
+import '../css/css/global.css';
 import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
-import inventory from '../css/img/inventory.png';
-import AI from '../css/img/AI.png';
+
 
 function ConnectorDiv() {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -50,6 +50,18 @@ function Test() {
   
   const [showSections, setShowSections] = useState(false);
   const sectionsRef = useRef(null);
+  const [text, setText] = useState('');
+  const [index, setIndex] = useState(0);
+  const name = 'Mary Villacampa';
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setText(name.substring(0, index));
+      setIndex(index => index + 1);
+    }, 100); // Typing speed in milliseconds
+
+    return () => clearInterval(interval);
+  }, [index]);
 
 
   const handleProceedClick = () => {
@@ -73,14 +85,15 @@ function Test() {
       <div className='content'>
         <div className='content-container'>
 
-          <div className='note'>
+          {/* <div className='note'>
             <p>Website  is  under  construction</p>
-          </div>
+          </div> */}
 
           <Section>
-            <div className='banner'>
+            <div className='banner gap-3'>
               <Section>
-                <motion.h4 animate={{ y: 50 }} transition={{delay: 0.5}} >&#x1F4AB; Hey, Guys!</motion.h4>
+                <motion.h4 animate={{ y: 50 }} transition={{delay: 0.5}} >
+                  <p className='mb-11'>&#x1F4AB; Hey, Guys!</p></motion.h4>
               </Section>
 
               <div className='ban1'>
@@ -89,15 +102,15 @@ function Test() {
                 </motion.p></Section>
 
                 <Section><motion.p animate={{ y: 50 }} transition={{delay: 0.3}} className='p2'>
-                  Mary Villacampa
+                  {text}
                 </motion.p></Section>
               </div>
 
               <Section><motion.h2 animate={{ y: 50 }} transition={{delay: 0.3}}>
-                and I love bringing ideas come to life!
+                <p className='mt-7 text-[25px]'>and I love bringing ideas come to life!</p>
               </motion.h2></Section>
 
-              <Section><motion.p animate={{ y: 50 }} transition={{delay: 0.1}} className='banner-intro'>
+              <Section><motion.p animate={{ y: 50 }} transition={{delay: 0.1}} className='banner-intro mt-5'>
                 I am a 4th-year data science student. I specialize in data
                 analysis, full-stack development, and UI/UX design. I love
                 helping people and create wonder through technology with style. I
@@ -106,7 +119,7 @@ function Test() {
 
               <Section><motion.button
                 animate={{ y: 50 }}
-                className='proceed-btn'
+                className='proceed-btn text-sm'
                 onClick={handleProceedClick}
               >
                 Proceed
@@ -200,9 +213,9 @@ function Test() {
                     
                   <motion.h4 animate={{ y: 60 }} transition={{ duration: 0.3, delay: 0.8 }}>
                     &#x1F44B; About me </motion.h4> 
-                    <div className='sub-container1'>
+                    <div className='sub-container1 mt-8 ml-8'>
                       <ul className='parag'>
-                        <li>
+                        <li className='mb-5'>
                           <motion.p animate={{ y: 60 }} transition={{ duration: 0.5, delay: 0.5 }}>
                             My full name is Mary Rose Jofel Villacampa. My passion for
                             data science has been there ever since I was in senior high
@@ -213,7 +226,7 @@ function Test() {
                             in relation to this, my creativity in app design grew as well.
                           </motion.p>
                         </li>
-                        <li>
+                        <li className='mb-5'>
                           <motion.p animate={{ y: 60 }} transition={{ duration: 0.5 }}>
                             Up to this day, I am striving to improve my skillset and
                             explore more on what there is to know. I aspire to create wonder
@@ -259,25 +272,23 @@ function Test() {
 
                     <motion.div animate={{ y: 60 }} transition={{ duration: 0.8 }}
                       className='techstack'>
-                        <div className="techstack-text">
+                        <div className="techstack-text ml-10 mt-10 mb-3">
                           <p>My tech stack:</p>
                         </div>
 
-                        <div className='techstack-img'>
+                        <div className='techstack-img ml-10 gap-4'>
                           <ul className='stack-line1'>
                             <li>Sass</li>
                             <li>Nodejs</li>
                             <li>Reactjs</li>
                             <li>Python</li>
-                            <li>CSS</li>
-                            <li>HTML5</li>
+                            <li>Typescript</li>
+                            <li>CSS/HTML5</li>
                           </ul>
                           <ul className='stack-line2'>
-                            <li>Threejs</li>
                             <li>Framer Motion </li>
                             <li>Expressjs </li>
-                            <li>MySQL </li>
-                            <li>Electron </li>
+                            <li>SQL </li>
                           </ul>
                           <ul className='stack-line3'>
                             <li>Scikit-Learn</li>
@@ -315,7 +326,7 @@ function Test() {
                           <p className='date'>APRIL 2023 – JUNE 2023</p>
                         </li>
 
-                        <li className='card-divider1'></li>
+                        <li className='card-divider1 mt-[-3.5rem]'></li>
                         
                         <li className='card-description'>
                           <p>Led a team of intern-developers and headed</p>
@@ -350,7 +361,7 @@ function Test() {
                           <p>through ChatGPT’s API endpoint connection.</p>
                         </li>
 
-                        <li className='card-divider2'></li>
+                        <li className='card-divider2 mr-[15px] mt-[7px]'></li>
                         
                         <li className='card-info'>
                           <div className='info-title'>
@@ -376,7 +387,7 @@ function Test() {
               </Section>
 
               <Section className='exp3'>
-                <div className='experience-container3'>
+                <div className='experience-container3 mt-[1.5rem]'>
                   <div className='cards-container'>
                   <ul className='card3'>
                         <li className='card-info'>
@@ -390,7 +401,7 @@ function Test() {
                           <p className='date'>APRIL 2023 – JUNE 2023</p>
                         </li>
 
-                        <li className='card-divider3'></li>
+                        <li className='card-divider3 mt-[-3.5rem]'></li>
                         
                         <li className='card-description'>
                           <p>Led a team of intern-developers and headed</p>
@@ -419,30 +430,12 @@ function Test() {
 
                   <h3><i>&#128736;</i> Some of My Works</h3>
 
-                  <div className='pcards-container'>
+                  <ul className='flex flex-col gap-10'>
+                    <li className='work1 bg-cream w-[100px] h-[100px]'></li>
+                    <li className='work2 bg-lightBlue w-[100px] h-[100px]'></li>
+                    <li className='work3 bg-teal w-[100px] h-[100px]'></li>
+                  </ul>
 
-                    <Section><div className='pcolumn1'>
-                      <div className='pcard1 pcards'></div>
-                      <div className='pcard2 pcards'></div>
-                      <div className='pcard3 pcards'></div>
-                    </div></Section>
-
-                    <Section><div className='pcolumn2'>
-                      <div className='pcard4 pcards'>
-                        <p>Inventory Manager</p>
-                        <img src={inventory} alt="inventory" />
-                        <i className="fa-brands fa-github git4"></i>
-                        <i class="fa-solid fa-arrow-up link4"></i>
-                      </div>
-
-                      <div className='pcard5 pcards'>
-                        <p>AI Docu Helper</p>
-                        <img src={AI} alt="AI" />
-                        <i className="fa-brands fa-github git5"></i>
-                        <i class="fa-solid fa-arrow-up link5"></i>
-                      </div>
-                    </div></Section>
-                  </div>
 
                 </div>
                 </motion.div>

@@ -1,11 +1,15 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import '@fortawesome/fontawesome-free/css/all.css';
 import '../css/Content.css';
 import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
+
+
+
 
 function ConnectorDiv() {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -47,6 +51,18 @@ function Test() {
   
   const [showSections, setShowSections] = useState(false);
   const sectionsRef = useRef(null);
+  const [text, setText] = useState('');
+  const [index, setIndex] = useState(0);
+  const name = 'Mary Villacampa';
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setText(name.substring(0, index));
+      setIndex(index => index + 1);
+    }, 100); // Typing speed in milliseconds
+
+    return () => clearInterval(interval);
+  }, [index]);
 
 
   const handleProceedClick = () => {
@@ -86,7 +102,7 @@ function Test() {
                 </motion.p></Section>
 
                 <Section><motion.p animate={{ y: 50 }} transition={{delay: 0.3}} className='p2'>
-                  Mary Villacampa
+                  {text}
                 </motion.p></Section>
               </div>
 
@@ -190,12 +206,13 @@ function Test() {
             <Section><div className='sections'>
               
               <Section className='about-me'>
+
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}
                   className='about-me'
                   ref={sectionsRef}>
                     
                   <motion.h4 animate={{ y: 60 }} transition={{ duration: 0.3, delay: 0.8 }}>
-                    &#x1F44B; About me </motion.h4>
+                    &#x1F44B; About me </motion.h4> 
                     <div className='sub-container1'>
                       <ul className='parag'>
                         <li>
@@ -265,15 +282,13 @@ function Test() {
                             <li>Nodejs</li>
                             <li>Reactjs</li>
                             <li>Python</li>
-                            <li>CSS</li>
-                            <li>HTML5</li>
+                            <li>Typescript</li>
+                            <li>CSS/HTML5</li>
                           </ul>
                           <ul className='stack-line2'>
-                            <li>Threejs</li>
                             <li>Framer Motion </li>
                             <li>Expressjs </li>
-                            <li>MySQL </li>
-                            <li>Electron </li>
+                            <li>SQL </li>
                           </ul>
                           <ul className='stack-line3'>
                             <li>Scikit-Learn</li>
@@ -294,7 +309,7 @@ function Test() {
             <div className='experience'>
 
               <Section><h3 className='experience-text'>
-                My Work Experience</h3></Section>
+              &#128188;  My Work Experience</h3></Section>
 
               <Section className='exp1'>
                 <div className='experience-container'>
@@ -406,21 +421,22 @@ function Test() {
                 </motion.div>
               </ConnectorDiv>
               </Section>
-
-              {/* <AnimatedDiv><motion.div
-                transition={{ duration: 0.9}}
-                className='connector-line'>
-              </motion.div></AnimatedDiv> */}
             </div>
               
 
               <Section>
                 <motion.div className='projects'>
                 <div className='projects-container'>
-                        <p>PROJECTS SECTION</p>
-                    </div>
+
+                  <h3><i>&#128736;</i> Some of My Works</h3>
+
+
+                </div>
                 </motion.div>
               </Section>
+
+
+
 
               <Section>
                 <motion.div className='contact'>

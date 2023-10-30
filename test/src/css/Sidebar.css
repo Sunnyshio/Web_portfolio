@@ -9,6 +9,7 @@
     left: 0;
     overflow-y: hidden;
     z-index: 3;
+    margin-left: 1.5rem;
 }
 
 .logo-container {
@@ -37,6 +38,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-left: 2.3rem;
 }
  .socials {
     list-style: none;
@@ -46,10 +48,9 @@
     justify-content: center;
     gap: 1rem;
     margin-bottom: 6rem;
-    margin-left: 4px;
+    margin-left: 6px;
     background-color: var(--darkViolet);
     border-radius: 20px;
-    /* background-color: white; */
     width: 50px;
     z-index: 1;
 }
