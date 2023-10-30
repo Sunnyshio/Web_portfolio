@@ -11,6 +11,8 @@ module.exports = {
         lightBlue: '#6C9BCF',
         darkViolet: '#251539',
         purple: '#654E92',
+        darkGray:'#403F3F',
+        
       },
       backgroundImage: {
         'blue-purple': 'linear-gradient(to right, #3490dc, #9561e2)',

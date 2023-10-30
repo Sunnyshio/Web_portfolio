@@ -8,6 +8,7 @@ import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
+import AI from '../css/img/AI.png'
 
 
 function ConnectorDiv() {
@@ -353,7 +354,7 @@ function Test() {
                 <div className='experience-container2'>
                   <div className='cards-container'>
                   <ul className='card2'>
-                  <li className='card-description'>
+                  <li className='card-description mr-[2rem]'>
                           <p>Led a team of intern-developers and headed</p>
                           <p>the development of an artificial intelligence </p>
                           <p>integrated application that acts as a student</p>
@@ -361,9 +362,9 @@ function Test() {
                           <p>through ChatGPT’s API endpoint connection.</p>
                         </li>
 
-                        <li className='card-divider2 mr-[15px] mt-[7px]'></li>
+                        <li className='card-divider2 mr-[1rem] mt-[7px]'></li>
                         
-                        <li className='card-info'>
+                        <li className='card-info ml-[-2rem]'>
                           <div className='info-title'>
                             <img src={ingen} alt="ingenuity_logo" className='img1'/>
                             <div className='title'>
@@ -431,9 +432,25 @@ function Test() {
                   <h3><i>&#128736;</i> Some of My Works</h3>
 
                   <ul className='flex flex-col gap-10'>
-                    <li className='work1 bg-cream w-[100px] h-[100px]'></li>
-                    <li className='work2 bg-lightBlue w-[100px] h-[100px]'></li>
-                    <li className='work3 bg-teal w-[100px] h-[100px]'></li>
+                    <li className='proj1 flex items-center'>
+
+                      <div className='proj1 flex flex-col gap-3 bg-lightBlue w-[500px] h-[150px] rounded-md z-10 mr-[-3.5rem]'>
+                        <p></p>
+                        <p className='px-5 py-3 text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
+                          It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
+                        <ul className='flex gap-5 ml-3'>
+                          <li className='text-white'>JavaScript</li>
+                          <li className='text-white'>Tailwindcss</li>
+                          <li className='text-white'>Nodejs</li>
+                          <li className='text-white'>Expressjs</li>
+                        </ul>
+                      </div>
+                      <div className='bg-white w-[600px] rounded-md draggable-false'>
+                        <img src={AI} alt="AI project" className='rounded-md'/>
+                      </div>
+                    </li>
+                    <li className='proj2 bg-lightBlue w-[100px] h-[100px]'></li>
+                    <li className='proj3 bg-teal w-[100px] h-[100px]'></li>
                   </ul>
 
 
