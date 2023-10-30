@@ -36,7 +36,7 @@
   transition: transform 0.3s ease-in-out;
   transition: background-color 0.5s ease;
   background-color: var(--darkViolet);
-  z-index: 5;
+  z-index: 99;
 }
 .nav-menu-container {
   display: flex;

@@ -309,7 +309,7 @@ function Test() {
               
             <div className='experience'>
 
-              <Section><h3 className='experience-text'>
+              <Section><h3 className='experience-text text-xl font-bold'>
               &#128188;  My Work Experience</h3></Section>
 
               <Section className='exp1'>
@@ -427,16 +427,17 @@ function Test() {
 
               <Section>
                 <motion.div className='projects'>
-                <div className='projects-container'>
+                <div className='projects-container mt-[80rem]'>
 
-                  <h3><i>&#128736;</i> Some of My Works</h3>
+                  <h3 className='text-xl font-bold'><i>&#128736;</i> Some of My Works</h3>
 
-                  <ul className='flex flex-col gap-10'>
+                  <ul className='flex flex-col gap-32'>
+
+                    <Section>
                     <li className='proj1 flex items-center'>
-
-                      <div className='proj1 flex flex-col gap-3 bg-lightBlue w-[500px] h-[150px] rounded-md z-10 mr-[-3.5rem]'>
-                        <p></p>
-                        <p className='px-5 py-3 text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
+                      <div className='proj1 flex flex-col gap-3 w-[500px] h-[150px] mr-[-3.5rem] z-20'>
+                        <p className='text-2xl text-white'>Ateneo U-Fest: Sadya 2023</p>
+                        <p className='px-5 py-3 bg-lightBlue rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
                           It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
                         <ul className='flex gap-5 ml-3'>
                           <li className='text-white'>JavaScript</li>
@@ -445,12 +446,69 @@ function Test() {
                           <li className='text-white'>Expressjs</li>
                         </ul>
                       </div>
-                      <div className='bg-white w-[600px] rounded-md draggable-false'>
+                      <div className='bg-white w-[600px] rounded-md draggable-false z-0'>
                         <img src={AI} alt="AI project" className='rounded-md'/>
                       </div>
                     </li>
-                    <li className='proj2 bg-lightBlue w-[100px] h-[100px]'></li>
-                    <li className='proj3 bg-teal w-[100px] h-[100px]'></li>
+                    </Section>
+
+                    <Section>
+                    <li className='proj2 flex items-center'>
+                    <div className='bg-white w-[600px] rounded-md draggable-false'>
+                        <img src={AI} alt="AI project" className='rounded-md'/>
+                      </div>
+                    <div className='proj2 flex flex-col gap-3 w-[500px] h-[150px] ml-[-3.5rem]'>
+                        <p className='text-2xl text-white text-right'>Scriptscribe: AI PDF Helper</p>
+                        <p className='px-5 py-3 bg-cream rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
+                          It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
+                        <ul className='flex gap-5 ml-3 justify-end'>
+                          <li className='text-white'>JavaScript</li>
+                          <li className='text-white'>Tailwindcss</li>
+                          <li className='text-white'>Nodejs</li>
+                          <li className='text-white'>Expressjs</li>
+                        </ul>
+                    </div>
+                    </li>
+                    </Section>
+
+                    <Section>
+                    <li className='proj3 flex items-center'>
+                      <div className='proj3 flex flex-col gap-3 w-[500px] h-[150px] mr-[-3.5rem] z-20'>
+                        <p className='text-2xl text-white'>Lightsource Trading</p>
+                        <p className='px-5 py-3 bg-lightBlue rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
+                          It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
+                        <ul className='flex gap-5 ml-3'>
+                          <li className='text-white'>JavaScript</li>
+                          <li className='text-white'>Tailwindcss</li>
+                          <li className='text-white'>Nodejs</li>
+                          <li className='text-white'>Expressjs</li>
+                        </ul>
+                      </div>
+                      <div className='bg-white w-[600px] rounded-md draggable-false z-0'>
+                        <img src={AI} alt="AI project" className='rounded-md'/>
+                      </div>
+                    </li>
+                    </Section>
+
+                    <Section>
+                    <li className='proj4 flex items-center'>
+                    <div className='bg-white w-[600px] rounded-md draggable-false'>
+                        <img src={AI} alt="AI project" className='rounded-md'/>
+                      </div>
+                    <div className='proj4 flex flex-col gap-3 w-[500px] h-[150px] ml-[-3.5rem]'>
+                        <p className='text-2xl text-white text-right'>E-commerce Website</p>
+                        <p className='px-5 py-3 bg-cream rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
+                          It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
+                        <ul className='flex gap-5 ml-3 justify-end'>
+                          <li className='text-white'>JavaScript</li>
+                          <li className='text-white'>Tailwindcss</li>
+                          <li className='text-white'>Nodejs</li>
+                          <li className='text-white'>Expressjs</li>
+                        </ul>
+                    </div>
+                    </li>
+                    </Section>
+                    
                   </ul>
 
 
@@ -462,7 +520,7 @@ function Test() {
 
 
               <Section>
-                <motion.div className='contact'>
+                <motion.div className='contact mt-[90rem]'>
                 <div className='contact-container'>
                         <p>CONTACT ME SECTION</p>
                     </div>
