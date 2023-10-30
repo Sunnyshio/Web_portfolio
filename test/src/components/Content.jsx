@@ -3,13 +3,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import '@fortawesome/fontawesome-free/css/all.css';
 import '../css/Content.css';
+import '../css/css/global.css';
 import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
-
-
-
+import sadya from '../css/img/sadya.png'
+import lightsource from '../css/img/lightsource.png'
+import AI from '../css/img/AI.png'
 
 function ConnectorDiv() {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -91,9 +92,10 @@ function Test() {
           </div> */}
 
           <Section>
-            <div className='banner'>
+            <div className='banner gap-3'>
               <Section>
-                <motion.h4 animate={{ y: 50 }} transition={{delay: 0.5}} >&#x1F4AB; Hey, Guys!</motion.h4>
+                <motion.h4 animate={{ y: 50 }} transition={{delay: 0.5}} >
+                  <p className='mb-11'>&#x1F4AB; Hey, Guys!</p></motion.h4>
               </Section>
 
               <div className='ban1'>
@@ -107,10 +109,10 @@ function Test() {
               </div>
 
               <Section><motion.h2 animate={{ y: 50 }} transition={{delay: 0.3}}>
-                and I love bringing ideas come to life!
+                <p className='mt-7 text-[25px]'>and I love bringing ideas come to life!</p>
               </motion.h2></Section>
 
-              <Section><motion.p animate={{ y: 50 }} transition={{delay: 0.1}} className='banner-intro'>
+              <Section><motion.p animate={{ y: 50 }} transition={{delay: 0.1}} className='banner-intro mt-5'>
                 I am a 4th-year data science student. I specialize in data
                 analysis, full-stack development, and UI/UX design. I love
                 helping people and create wonder through technology with style. I
@@ -119,7 +121,7 @@ function Test() {
 
               <Section><motion.button
                 animate={{ y: 50 }}
-                className='proceed-btn'
+                className='proceed-btn text-sm'
                 onClick={handleProceedClick}
               >
                 Proceed
@@ -213,9 +215,9 @@ function Test() {
                     
                   <motion.h4 animate={{ y: 60 }} transition={{ duration: 0.3, delay: 0.8 }}>
                     &#x1F44B; About me </motion.h4> 
-                    <div className='sub-container1'>
+                    <div className='sub-container1 mt-8 ml-8'>
                       <ul className='parag'>
-                        <li>
+                        <li className='mb-5'>
                           <motion.p animate={{ y: 60 }} transition={{ duration: 0.5, delay: 0.5 }}>
                             My full name is Mary Rose Jofel Villacampa. My passion for
                             data science has been there ever since I was in senior high
@@ -226,7 +228,7 @@ function Test() {
                             in relation to this, my creativity in app design grew as well.
                           </motion.p>
                         </li>
-                        <li>
+                        <li className='mb-5'>
                           <motion.p animate={{ y: 60 }} transition={{ duration: 0.5 }}>
                             Up to this day, I am striving to improve my skillset and
                             explore more on what there is to know. I aspire to create wonder
@@ -272,11 +274,11 @@ function Test() {
 
                     <motion.div animate={{ y: 60 }} transition={{ duration: 0.8 }}
                       className='techstack'>
-                        <div className="techstack-text">
+                        <div className="techstack-text ml-10 mt-10 mb-3">
                           <p>My tech stack:</p>
                         </div>
 
-                        <div className='techstack-img'>
+                        <div className='techstack-img ml-10 gap-4'>
                           <ul className='stack-line1'>
                             <li>Sass</li>
                             <li>Nodejs</li>
@@ -308,7 +310,7 @@ function Test() {
               
             <div className='experience'>
 
-              <Section><h3 className='experience-text'>
+              <Section><h3 className='experience-text text-xl font-bold'>
               &#128188;  My Work Experience</h3></Section>
 
               <Section className='exp1'>
@@ -326,7 +328,7 @@ function Test() {
                           <p className='date'>APRIL 2023 – JUNE 2023</p>
                         </li>
 
-                        <li className='card-divider1'></li>
+                        <li className='card-divider1 mt-[-3.5rem]'></li>
                         
                         <li className='card-description'>
                           <p>Led a team of intern-developers and headed</p>
@@ -353,7 +355,7 @@ function Test() {
                 <div className='experience-container2'>
                   <div className='cards-container'>
                   <ul className='card2'>
-                  <li className='card-description'>
+                  <li className='card-description mr-[2rem]'>
                           <p>Led a team of intern-developers and headed</p>
                           <p>the development of an artificial intelligence </p>
                           <p>integrated application that acts as a student</p>
@@ -361,9 +363,9 @@ function Test() {
                           <p>through ChatGPT’s API endpoint connection.</p>
                         </li>
 
-                        <li className='card-divider2'></li>
+                        <li className='card-divider2 mr-[1rem] mt-[7px]'></li>
                         
-                        <li className='card-info'>
+                        <li className='card-info ml-[-2rem]'>
                           <div className='info-title'>
                             <img src={ingen} alt="ingenuity_logo" className='img1'/>
                             <div className='title'>
@@ -387,7 +389,7 @@ function Test() {
               </Section>
 
               <Section className='exp3'>
-                <div className='experience-container3'>
+                <div className='experience-container3 mt-[1.5rem]'>
                   <div className='cards-container'>
                   <ul className='card3'>
                         <li className='card-info'>
@@ -401,7 +403,7 @@ function Test() {
                           <p className='date'>APRIL 2023 – JUNE 2023</p>
                         </li>
 
-                        <li className='card-divider3'></li>
+                        <li className='card-divider3 mt-[-3.5rem]'></li>
                         
                         <li className='card-description'>
                           <p>Led a team of intern-developers and headed</p>
@@ -426,31 +428,111 @@ function Test() {
 
               <Section>
                 <motion.div className='projects'>
-                <div className='projects-container'>
+                <div className='projects-container mt-[80rem]'>
 
-                  <h3><i>&#128736;</i> Some of My Works</h3>
+                  <h3 className='text-xl font-bold'><i>&#128736;</i> Some of My Works</h3>
+
+                  <ul className='flex flex-col gap-32'>
+
+                    <Section>
+                    <li className='proj1 flex items-center'>
+                      <div className='proj1 flex flex-col gap-3 w-[500px] h-[150px] mr-[-3.5rem] z-20'>
+                        <p className='text-2xl text-white'>Ateneo U-Fest: Sadya 2023</p>
+                        <p className='px-5 py-3 bg-lightBlue rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
+                          It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
+                        <ul className='flex gap-5 ml-3'>
+                          <li className='text-white'>Typescript</li>
+                          <li className='text-white'>Tailwindcss</li>
+                          <li className='text-white'>Nodejs</li>
+                          <li className='text-white'>UI Storybook</li>
+                        </ul>
+                      </div>
+                      <div className='bg-white w-[600px] rounded-md draggable-false z-0'>
+                        <img src={sadya} alt="AI project" className='rounded-md'/>
+                      </div>
+                    </li>
+                    </Section>
+
+                    <Section>
+                    <li className='proj2 flex items-center'>
+                    <div className='bg-white w-[600px] rounded-md draggable-false'>
+                        <img src={AI} alt="AI project" className='rounded-md'/>
+                      </div>
+                    <div className='proj2 flex flex-col gap-3 w-[500px] h-[150px] ml-[-3.5rem]'>
+                        <p className='text-2xl text-white text-right'>Scriptscribe: AI PDF Helper</p>
+                        <p className='px-5 py-3 bg-cream rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
+                          It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
+                        <ul className='flex gap-5 ml-3 justify-end'>
+                          <li className='text-white'>React JS</li>
+                          <li className='text-white'>SASS</li>
+                          <li className='text-white'>Nodejs</li>
+                        </ul>
+                    </div>
+                    </li>
+                    </Section>
+
+                    <Section>
+                    <li className='proj3 flex items-center'>
+                      <div className='proj3 flex flex-col gap-3 w-[500px] h-[150px] mr-[-3.5rem] z-20'>
+                        <p className='text-2xl text-white'>Lightsource Trading</p>
+                        <p className='px-5 py-3 bg-lightBlue rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
+                          It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
+                        <ul className='flex gap-5 ml-3'>
+                          <li className='text-white'>React JS</li>
+                          <li className='text-white'>SASS</li>
+                          <li className='text-white'>Nodejs</li>
+                        </ul>
+                      </div>
+                      <div className='bg-white w-[600px] rounded-md draggable-false z-0'>
+                        <img src={lightsource} alt="AI project" className='rounded-md'/>
+                      </div>
+                    </li>
+                    </Section>
+
+                    <Section>
+                    <li className='proj4 flex items-center'>
+                    <div className='bg-white w-[600px] rounded-md draggable-false'>
+                        <img src={AI} alt="AI project" className='rounded-md'/>
+                      </div>
+                    <div className='proj4 flex flex-col gap-3 w-[500px] h-[150px] ml-[-3.5rem]'>
+                        <p className='text-2xl text-white text-right'>E-commerce Website</p>
+                        <p className='px-5 py-3 bg-cream rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
+                          It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
+                        <ul className='flex gap-5 ml-3 justify-end'>
+                          <li className='text-white'>JavaScript</li>
+                          <li className='text-white'>Tailwindcss</li>
+                          <li className='text-white'>Nodejs</li>
+                          <li className='text-white'>Expressjs</li>
+                          <li className='text-white'>SASS</li>
+                        </ul>
+                    </div>
+                    </li>
+                    </Section>
+                    
+                  </ul>
 
 
                 </div>
                 </motion.div>
               </Section>
 
-
-
-
               <Section>
-                <motion.div className='contact'>
-                <div className='contact-container'>
-                        <p>CONTACT ME SECTION</p>
-                    </div>
-                </motion.div>
-              </Section>
+                <motion.div className='contact mt-[70rem] justify-center flex flex-col'>
+                <div className='contact-container flex flex-col'>
+                  <div><p className='font-semibold text-lg text-center'>Send me a message <i>&#128172;</i></p></div>
+                  <div className='mt-[-2.5rem] text-lightBlue'><h3 className='text-3xl font-semibold text-center'>Would you like to work with me?</h3></div>
+                </div>
+                <div>
+                  <p className='w-[400px] text-center text-white mt-7'>You can send me a message through the following platforms.
+                    I am excited to work with you!
+                  </p>
+                </div></motion.div></Section>
+                
+              
 
             </div></Section>
           )}
 
-      
-          
 
         </div>
       </div>

@@ -8,8 +8,9 @@ import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
+import sadya from '../css/img/sadya.png'
+import lightsource from '../css/img/lightsource.png'
 import AI from '../css/img/AI.png'
-
 
 function ConnectorDiv() {
   const [ref, inView] = useInView({ triggerOnce: true });
@@ -440,14 +441,14 @@ function Test() {
                         <p className='px-5 py-3 bg-lightBlue rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
                           It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
                         <ul className='flex gap-5 ml-3'>
-                          <li className='text-white'>JavaScript</li>
+                          <li className='text-white'>Typescript</li>
                           <li className='text-white'>Tailwindcss</li>
                           <li className='text-white'>Nodejs</li>
-                          <li className='text-white'>Expressjs</li>
+                          <li className='text-white'>UI Storybook</li>
                         </ul>
                       </div>
                       <div className='bg-white w-[600px] rounded-md draggable-false z-0'>
-                        <img src={AI} alt="AI project" className='rounded-md'/>
+                        <img src={sadya} alt="AI project" className='rounded-md'/>
                       </div>
                     </li>
                     </Section>
@@ -462,10 +463,9 @@ function Test() {
                         <p className='px-5 py-3 bg-cream rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
                           It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
                         <ul className='flex gap-5 ml-3 justify-end'>
-                          <li className='text-white'>JavaScript</li>
-                          <li className='text-white'>Tailwindcss</li>
+                          <li className='text-white'>React JS</li>
+                          <li className='text-white'>SASS</li>
                           <li className='text-white'>Nodejs</li>
-                          <li className='text-white'>Expressjs</li>
                         </ul>
                     </div>
                     </li>
@@ -478,14 +478,13 @@ function Test() {
                         <p className='px-5 py-3 bg-lightBlue rounded-md text-white'>This website is a project requirement from my fullstack developement class during my 3rd year in college.
                           It is an e-commerce website that caters to customers who would like to view, purchase and consign a cost-effective designer bag.</p>
                         <ul className='flex gap-5 ml-3'>
-                          <li className='text-white'>JavaScript</li>
-                          <li className='text-white'>Tailwindcss</li>
+                          <li className='text-white'>React JS</li>
+                          <li className='text-white'>SASS</li>
                           <li className='text-white'>Nodejs</li>
-                          <li className='text-white'>Expressjs</li>
                         </ul>
                       </div>
                       <div className='bg-white w-[600px] rounded-md draggable-false z-0'>
-                        <img src={AI} alt="AI project" className='rounded-md'/>
+                        <img src={lightsource} alt="AI project" className='rounded-md'/>
                       </div>
                     </li>
                     </Section>
@@ -504,6 +503,7 @@ function Test() {
                           <li className='text-white'>Tailwindcss</li>
                           <li className='text-white'>Nodejs</li>
                           <li className='text-white'>Expressjs</li>
+                          <li className='text-white'>SASS</li>
                         </ul>
                     </div>
                     </li>
@@ -516,22 +516,23 @@ function Test() {
                 </motion.div>
               </Section>
 
-
-
-
               <Section>
-                <motion.div className='contact mt-[90rem]'>
-                <div className='contact-container'>
-                        <p>CONTACT ME SECTION</p>
-                    </div>
-                </motion.div>
-              </Section>
+                <motion.div className='contact mt-[70rem] justify-center flex flex-col'>
+                <div className='contact-container flex flex-col'>
+                  <div><p className='font-semibold text-lg text-center'>Send me a message <i>&#128172;</i></p></div>
+                  <div className='mt-[-2.5rem] text-lightBlue'><h3 className='text-3xl font-semibold text-center'>Would you like to work with me?</h3></div>
+                </div>
+                <div>
+                  <p className='w-[400px] text-center text-white mt-7'>You can send me a message through the following platforms.
+                    I am excited to work with you!
+                  </p>
+                </div></motion.div></Section>
+                
+              
 
             </div></Section>
           )}
 
-      
-          
 
         </div>
       </div>
