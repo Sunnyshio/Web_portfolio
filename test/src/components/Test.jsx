@@ -8,7 +8,9 @@ import pic1 from '../css/img/pic1.png';
 import pic2 from '../css/img/pic2.png';
 import pic3 from '../css/img/pic3.png';
 import ingen from '../css/img/Ingenuity.png';
+import sphere from '../css/img/Sphere.png';
 import sadya from '../css/img/sadya.png'
+import sysdev from '../css/img/sysdev.jpeg'
 import lightsource from '../css/img/lightsource.png'
 import AI from '../css/img/AI.png'
 
@@ -70,7 +72,7 @@ function Test() {
     setShowSections(true);
     setTimeout(() => {
       const scrollHeight = document.documentElement.scrollHeight;
-      const targetScroll = scrollHeight * 0.18; // Scroll to 50% of the page height
+      const targetScroll = scrollHeight * 0.14; // Scroll to 50% of the page height
       window.scrollTo({
         top: targetScroll,
         behavior: 'smooth',
@@ -78,6 +80,7 @@ function Test() {
       // setShowScrolldownText(true);
     }, 100);
   };
+
   
   
   
@@ -121,7 +124,7 @@ function Test() {
 
               <Section><motion.button
                 animate={{ y: 50 }}
-                className='proceed-btn text-sm'
+                className='border proceed-btn text-sm border-transparent hover:border-cream hover:bg-transparent ease-in-out duration-300'
                 onClick={handleProceedClick}
               >
                 Proceed
@@ -319,23 +322,23 @@ function Test() {
                   <ul className='card1'>
                         <li className='card-info'>
                           <div className='info-title'>
-                            <img src={ingen} alt="ingenuity_logo" className='img1'/>
-                            <div className='title'>
-                              <p>Ingenuity</p>
-                              <p className='software'> Software</p></div>
+                            <img src={sysdev} alt="ingenuity_logo" className='img1'/>
+                            <div className='flex flex-col title ml-[-10px]'>
+                              <p className=''>SAMAHAN</p>
+                              <p className='text-[1.1rem] mt-[-5px]'>Systems and Development</p></div>
                           </div>
-                          <p className='position'>FULL-STACK DEVELOPMENT INTERN</p>
-                          <p className='date'>APRIL 2023 – JUNE 2023</p>
+                          <p className='position flex justify-center mt-6 mr-[1rem]'>FULL-STACK DEVELOPMENT INTERN</p>
+                          <p className='date flex justify-center pt-2 mr-[1rem]'>APRIL 2023 – Present</p>
                         </li>
 
                         <li className='card-divider1 mt-[-3.5rem]'></li>
                         
                         <li className='card-description'>
-                          <p>Led a team of intern-developers and headed</p>
-                          <p>the development of an artificial intelligence </p>
-                          <p>integrated application that acts as a student</p>
-                          <p>helper. The application is integrated with AI </p>
-                          <p>through ChatGPT’s API endpoint connection.</p>
+                          <p className='w-[400px] py-2 text-center pr-[4px]'>I am a frontend developer at Ateneo de Davao's SAMAHAN Systems and Development department.
+                            My resposibilities include, collaborative development, and version control / git workflow.
+                            I translate design mockups and wireframes into interactive and intuitive user interfaces, and 
+                            work with other developers to deliver projects that are needed by Ateneo de Davao's institution. 
+                          </p>
                         </li>
                   </ul>
                   </div>
@@ -352,7 +355,7 @@ function Test() {
               
 
               <Section className='exp2'>
-                <div className='experience-container2'>
+                <div className='experience-container2 mt-[3rem]'>
                   <div className='cards-container'>
                   <ul className='card2'>
                   <li className='card-description mr-[2rem]'>
@@ -368,12 +371,11 @@ function Test() {
                         <li className='card-info ml-[-2rem]'>
                           <div className='info-title'>
                             <img src={ingen} alt="ingenuity_logo" className='img1'/>
-                            <div className='title'>
-                              <p>Ingenuity</p>
-                              <p className='software'> Software</p></div>
+                            <div className='title ml-[-10px]'>
+                              <p>Ingenuity Software</p></div>
                           </div>
-                          <p className='position'>FULL-STACK DEVELOPMENT INTERN</p>
-                          <p className='date'>APRIL 2023 – JUNE 2023</p>
+                          <p className='flex justify-center mt-4 mr-[6px] font-semibold text-center'>FULL-STACK DEVELOPMENT INTERN</p>
+                          <p className='date flex justify-center pt-2 mr-[1rem]'>APRIL 2023 – JUNE 2023</p>
                         </li>
                   </ul>
                   </div>
@@ -394,23 +396,21 @@ function Test() {
                   <ul className='card3'>
                         <li className='card-info'>
                           <div className='info-title'>
-                            <img src={ingen} alt="ingenuity_logo" className='img1'/>
-                            <div className='title'>
-                              <p>Ingenuity</p>
-                              <p className='software'> Software</p></div>
+                            <img src={sphere} alt="ingenuity_logo" className='img1'/>
+                            <div className='title ml-[-10px]'>
+                              <p>Sphere Rocket</p></div>
                           </div>
-                          <p className='position'>FULL-STACK DEVELOPMENT INTERN</p>
-                          <p className='date'>APRIL 2023 – JUNE 2023</p>
+                          <p className='flex position mt-4 justify-center mr-[1rem]'>FRONTEND DEVELOPER</p>
+                          <p className='flex date pt-2 justify-center mr-[1rem]'>APRIL 2023 – JUNE 2023</p>
                         </li>
 
                         <li className='card-divider3 mt-[-3.5rem]'></li>
                         
                         <li className='card-description'>
-                          <p>Led a team of intern-developers and headed</p>
-                          <p>the development of an artificial intelligence </p>
-                          <p>integrated application that acts as a student</p>
-                          <p>helper. The application is integrated with AI </p>
-                          <p>through ChatGPT’s API endpoint connection.</p>
+                          <p className='w-[400px] py-2 text-center'>I played a pivotal role in crafting seamless and visually appealing user interfaces for our web applications. 
+                          Over the course of one year, I collaborated closely with full-stack and backend developers to deliver high-quality products that met 
+                          both user experience and business requirements.</p>
+                          
                         </li>
                   </ul>
                   </div>
@@ -519,13 +519,22 @@ function Test() {
               <Section>
                 <motion.div className='contact mt-[70rem] justify-center flex flex-col'>
                 <div className='contact-container flex flex-col'>
-                  <div><p className='font-semibold text-lg text-center'>Send me a message <i>&#128172;</i></p></div>
+                  <div><p className='font-semibold text-lg text-center tracking-wider'>Send me a message <i>&#128172;</i></p></div>
                   <div className='mt-[-2.5rem] text-lightBlue'><h3 className='text-3xl font-semibold text-center'>Would you like to work with me?</h3></div>
                 </div>
-                <div>
-                  <p className='w-[400px] text-center text-white mt-7'>You can send me a message through the following platforms.
+                <div className='flex flex-col items-center gap-5'>
+                  <div><p className='w-[430px] text-center text-white mt-7'>You can send me a message through Gmail by clicking the button below.
                     I am excited to work with you!
-                  </p>
+                  </p></div>
+                  <div>
+                    <button 
+                    href='mailto:maryrosedvillacampa@gmail.com' 
+                    className='border border-slate-300 hover:border-cream rounded-md ease-in-out duration-300'>
+                    <a href='mailto:maryrosedvillacampa@gmail.com'>
+                      <p
+                    className='text-lightBlue py-2 px-4 hover:text-cream ease-in-out duration-300 tracking-wider'>Say Hello!
+                    </p></a>
+                  </button></div>
                 </div></motion.div></Section>
                 
               

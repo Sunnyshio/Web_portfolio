@@ -60,15 +60,53 @@ function Navbar() {
       behavior: 'smooth',
     });
   };
+  const handleExpClick = () => {
+    const targetOffset = window.innerHeight * 2.05;
+    window.scrollTo({
+      top: targetOffset,
+      behavior: 'smooth',
+    });
+  };
+  const handlePrjClick = () => {
+    const targetOffset = window.innerHeight * 3.2;
+    window.scrollTo({
+      top: targetOffset,
+      behavior: 'smooth',
+    });
+  };
+  const handleContactClick = () => {
+    const targetOffset = window.innerHeight * 6.5;
+    window.scrollTo({
+      top: targetOffset,
+      behavior: 'smooth',
+    });
+  };
 
   return (
     <>
       <div className={`navbar ${isVisible ? '' : 'hidden'} ${isTopOfPage ? 'transparent' : ''}`}>
         
         <Section><div className='nav-menu-container'>
-          <ul className='nav-menu'>
+          <ul className='nav-menu hover:text-cream'>
             {menuItems.map((item, index) => (
-              <motion.li
+              <motion.li 
+              className=' hover:text-cream 
+              relative
+                cursor-pointer
+                transition-all
+                duration-500
+                before:absolute
+                before:-bottom-2
+                before:left-0
+                before:w-0
+                before:h-0.5
+                before:rounded-full
+                before:opacity-0
+                before:transition-all
+                before:duration-500
+                before:bg-cream
+                hover:before:w-full
+                hover:before:opacity-100'
                 key={index}
                 initial={{ y: -20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -76,6 +114,18 @@ function Navbar() {
               >
             {index === 0 ? (
                     <a href="#about" onClick={handleAboutMeClick}>
+                      {item}
+                    </a>
+                  ) : index === 1 ? (
+                    <a href="#experience" onClick={handleExpClick}>
+                      {item}
+                    </a>
+                  ) : index === 2 ? (
+                    <a href="#project" onClick={handlePrjClick}>
+                      {item}
+                    </a>
+                  ) : index === 3 ? (
+                    <a href="#contact" onClick={handleContactClick}>
                       {item}
                     </a>
                   ) : (
@@ -86,7 +136,8 @@ function Navbar() {
           </ul>
           <motion.button initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          className='resume-btn text-sm'>Resume</motion.button>
+          className='resume-btn text-sm bg-lightBlue border border-transparent hover:border-cream hover:bg-transparent ease-in-out duration-300'>
+            Resume</motion.button>
         </div></Section>
       </div>
     </>
