@@ -68,7 +68,7 @@ function Navbar() {
     });
   };
   const handlePrjClick = () => {
-    const targetOffset = window.innerHeight * 3.2;
+    const targetOffset = window.innerHeight * 3.5;
     window.scrollTo({
       top: targetOffset,
       behavior: 'smooth',
@@ -137,7 +137,9 @@ function Navbar() {
           <motion.button initial={{ y: -20, opacity: 0 }} animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className='resume-btn text-sm bg-lightBlue border border-transparent hover:border-cream hover:bg-transparent ease-in-out duration-300'>
-            Resume</motion.button>
+            <a href='/COLLEGE RESUME.pdf' target='_blank' rel='noopener noreferrer'>
+              Resume
+              </a></motion.button>
         </div></Section>
       </div>
     </>
